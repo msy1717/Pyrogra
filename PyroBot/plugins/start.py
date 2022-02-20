@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
-
+from pyrogra.db.my import *
 
 states = {}
 
