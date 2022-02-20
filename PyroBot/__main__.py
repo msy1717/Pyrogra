@@ -7,9 +7,9 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.WARNING)
 
 # vars
-APP_ID = config("APP_ID", default=None, cast=int)
-API_HASH = config("API_HASH", default=None)
-BOT_TOKEN = config("BOT_TOKEN", default=None)
+APP_ID = 7939198
+API_HASH = "eb8a70c3ced65165a42a20c549ee704a"
+BOT_TOKEN = "2083760091:AAEglAfYNzzEOIIL6bk6dEe5Jl0IblJS-4I"
 
 if __name__ == "__main__" :
     print("Starting Bot...")
