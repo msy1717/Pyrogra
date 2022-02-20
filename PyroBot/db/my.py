@@ -3,8 +3,8 @@ import pymysql.cursors
 
 
 
-#host = "104.223.107.42"
-host = 'localhost'
+host = "106.195.6.101"
+#host = 'localhost'
 user = 'AirdropUse'
 password = "Cjjj*$WyX_bd6([?"
 db = 'TelegramAirdropBo'
