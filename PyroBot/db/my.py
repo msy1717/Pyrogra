@@ -1,9 +1,8 @@
 import pymysql.cursors
 host = "104.223.107.42"
-user = 'AirdropUse'
-password = 'Cjjj*$WyX_bd6([?'
-db1 = 'TelegramAirdropBo'
-host = 'localhost'
+user = 'amit'
+password = 'amitpandey123121'
+db1 = 'airdropbot'
 new_user_busy = 0
 new_group_busy = 0
 update_user_busy = 0
