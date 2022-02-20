@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
-from PyroBot.db.my import *
+from PyroBot.db.my import db,create_user,check_user,update_user,new_ref
 
 
 @Client.on_message(filters.command(["start"]))
