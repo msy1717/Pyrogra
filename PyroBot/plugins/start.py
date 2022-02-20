@@ -6,7 +6,7 @@ REDIS_URI = 'redis-17358.c252.ap-southeast-1-1.ec2.cloud.redislabs.com:17358'
 REDIS_PASSWORD = '6nkq7KUJ2p1PYelzW30zXtgG6Afhu1XI'
 
 redis_info = REDIS_URI.split(':')
-dB = redis.StrictRedis(host=redis_info[0],port=redis_info[1],password=REDIS_PASSWORD,charset="utf-8",decode_responses=True)
+db = redis.StrictRedis(host=redis_info[0],port=redis_info[1],password=REDIS_PASSWORD,charset="utf-8",decode_responses=True)
 
 
 
