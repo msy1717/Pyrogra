@@ -2,7 +2,11 @@ from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
 
 
+states = {}
 
+captchas = {}
+
+userinfo = {}
 
 def randomString(stringLength=5):
 
