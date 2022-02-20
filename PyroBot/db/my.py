@@ -6,12 +6,13 @@ import pymysql.cursors
 host = "104.223.107.42"
 user = 'amit'
 password = 'amitpandey123121'
-db1 = 'airdropbot'
+db = 'airdropbot'
 new_user_busy = 0
 new_group_busy = 0
 update_user_busy = 0
 update_group_busy = 0
 
+'''
 class DB:
     conn = None
     def connect(self):
@@ -37,6 +38,7 @@ class DB:
             self.conn.commit()
 
 db = DB()
+'''
 db_con = pymysql.connect(host = host,user = user,password = password,db = db)
 
     
