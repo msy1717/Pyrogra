@@ -1,4 +1,9 @@
 import pymysql.cursors
+
+
+check_user = check_user
+'''
+
 host = "104.223.107.42"
 user = 'amit'
 password = 'amitpandey123121'
@@ -99,4 +104,4 @@ def new_ref(refby,refto):
     sql = "Update users Set total_referrals = {} where userid={}".format(total,refby)
     db.execute(sql)
     db.commit()
-    
+    '''
