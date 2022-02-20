@@ -1,6 +1,17 @@
 from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
-from pyrogra.db.my import *
+from PyroBot.db.my import *
+
+
+@Client.on_message(filters.command(["start"]))
+async def start(bot, update):
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Hello there!", reply_markup=ReplyKeyboardMarkup( [ ["A", "B", "C", "D"],["E", "F", "G"],["H", "I"],["J"]], resize_keyboard=True ) )
+       
+
+
+'''
 
 states = {}
 
@@ -183,16 +194,8 @@ def show_menu_query(_,query):
     else:
 
         return False
-@Client.on_message(filters.command(["start"]))
-async def start(bot, update):
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text="Hello there!", reply_markup=ReplyKeyboardMarkup( [ ["A", "B", "C", "D"],["E", "F", "G"],["H", "I"],["J"]], resize_keyboard=True ) )
-       
+
         
-
-
-
  
 @Client.on_message(filters.command(["sta"]))
 
@@ -343,3 +346,4 @@ def start(client,message):
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         message.reply('Menu:',reply_markup = reply_markup)
+'''
