@@ -1,6 +1,5 @@
 from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
-from PyroBot.db import *
 import redis
 
 REDIS_URI = 'redis-17358.c252.ap-southeast-1-1.ec2.cloud.redislabs.com:17358'
