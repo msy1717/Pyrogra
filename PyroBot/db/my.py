@@ -1,7 +1,7 @@
 import pymysql.cursors
 
 
-'''
+
 
 host = "104.223.107.42"
 user = 'amit'
@@ -15,7 +15,11 @@ update_group_busy = 0
 class DB:
     conn = None
     def connect(self):
-        self.conn = pymysql.connect(host = host,user = user,password = password,db = db1)
+        self.conn = pymysql.connect(host=host,
+                             user=user,
+                             password=password,
+                             database=db1,
+                             cursorclass=pymysql.cursors.DictCursor)
     def execute(self, sql):
         try:
             cursor = self.conn.cursor()
@@ -103,4 +107,4 @@ def new_ref(refby,refto):
     sql = "Update users Set total_referrals = {} where userid={}".format(total,refby)
     db.execute(sql)
     db.commit()
-    '''
+    
