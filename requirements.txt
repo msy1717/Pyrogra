@@ -3,3 +3,4 @@ captcha
 pyrogram
 tweepy
 PyMySQL
+redis
