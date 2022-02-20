@@ -13,6 +13,7 @@ BOT_TOKEN = "2083760091:AAEglAfYNzzEOIIL6bk6dEe5Jl0IblJS-4I"
 
 if __name__ == "__main__" :
     print("Starting Bot...")
+    print("sed")
     plugins = dict(root="PyroBot/plugins")
     app = pyrogram.Client(
         "BotzHub",
@@ -24,3 +25,4 @@ if __name__ == "__main__" :
     app.run()
     
 print("started mrunals bot")
+print("hi")
