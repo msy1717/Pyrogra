@@ -1,7 +1,7 @@
 import pymysql.cursors
 
 
-
+'''
 
 host = "106.195.6.101"
 #host = 'localhost'
@@ -13,7 +13,7 @@ new_group_busy = 0
 update_user_busy = 0
 update_group_busy = 0
 
-'''
+
 class DB:
     conn = None
     def connect(self):
@@ -39,7 +39,7 @@ class DB:
             self.conn.commit()
 
 db = DB()
-'''
+
 db_con = pymysql.connect(host = host,user = user,password = password,db = db)
 
     
@@ -111,3 +111,4 @@ def new_ref(refby,refto):
     db.execute(sql)
     db.commit()
     
+'''
