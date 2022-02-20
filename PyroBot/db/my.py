@@ -1,7 +1,6 @@
 import pymysql.cursors
 
 
-check_user = check_user
 '''
 
 host = "104.223.107.42"
