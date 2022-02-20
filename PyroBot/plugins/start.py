@@ -2,6 +2,183 @@ from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton  
 
 
+
+
+def randomString(stringLength=5):
+
+    letters = string.ascii_lowercase
+
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
+def gen_captcha(userid):
+
+    string = randomString()
+
+    data = image.generate(string)
+
+    image.write(string, './captcha/{}.png'.format(str(userid)))
+
+    states[str(userid)+'_captcha'] = string
+
+    print(states[str(userid)+'_captcha'])
+
+def captcha_query(_,message):
+
+    user_id = message.from_user.id
+
+    try:
+
+        a = states[str(user_id)] == 'captcha_true'
+
+    except:
+
+        a = 0
+
+    if a:
+
+        return True
+
+def tg_verify_query(_,query):
+
+    a = query.data
+
+    if 'verify_tg' in a:
+
+        return True 
+
+    else:
+
+        return False
+
+    
+
+def twitter_verify_query(_,query):
+
+    pass
+
+def medium_verify_query(_,query):
+
+    a = query.data
+
+    if 'medium_verify' in a:
+
+        return True
+
+    else:
+
+        return False
+
+def medium_verify_time(_,query):
+
+    a = query.data
+
+    if 'verify_medium_time' in a:
+
+        return True
+
+    else:
+
+        return False
+
+def show_menu(_,query):
+
+    a = query.data
+
+    if a == 'show_menu':
+
+        return True
+
+    else:
+
+        return False
+
+    
+
+def check_bal(_,query):
+
+    a = query.data
+
+    if 'show_balance' in a:
+
+        return True
+
+    else:
+
+        return False
+
+def check_ref(_,query):
+
+    a = query.data
+
+    if a == 'show_referral':
+
+        return True
+
+    else:
+
+        return False
+
+def twitter_verify_(_,query):
+
+    a = query.data
+
+    if 'twitter_verify' in a:
+
+        return True
+
+    else:
+
+        return False
+
+def twitter_input_query(client,message):
+
+    user_id = message.from_user.id
+
+    print(user_id)
+
+    print(states[str(user_id)])
+
+    try:
+
+        state = states[str(user_id)]
+
+    except:
+
+        state = 'None'
+
+    print('State =',state )
+
+    if state == 'twitter_input':
+
+        return True
+
+    else:
+
+        return False
+
+def show_referral(_,query):
+
+    a = query.data
+
+    if 'show_referral' in a:
+
+        return True
+
+    else:
+
+        return False
+
+def show_menu_query(_,query):
+
+    a = query.data
+
+    if 'show_menu' in a:
+
+        return True
+
+    else:
+
+        return False
 @Client.on_message(filters.command(["start"]))
 async def start(bot, update):
     await bot.send_message(
