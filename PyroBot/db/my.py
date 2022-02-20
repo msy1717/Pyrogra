@@ -72,7 +72,7 @@ except Exception as e:
     print("Bot is quiting...")
     exit()
 
-db = db
+
 
 
 
