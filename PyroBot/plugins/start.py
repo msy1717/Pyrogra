@@ -13,7 +13,7 @@ async def start(bot, update):
 
 
  
-@Client.on_message(Filters.command(["sta"]))
+@Client.on_message(filters.command(["sta"]))
 
 def start(client,message):
 
