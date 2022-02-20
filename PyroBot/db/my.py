@@ -1,8 +1,7 @@
-import pymysql.cursors
+import redis
 
 
 '''
-
 host = "106.195.6.101"
 #host = 'localhost'
 user = 'AirdropUse'
@@ -12,8 +11,8 @@ new_user_busy = 0
 new_group_busy = 0
 update_user_busy = 0
 update_group_busy = 0
-
-
+'''
+'''
 class DB:
     conn = None
     def connect(self):
@@ -54,6 +53,29 @@ def check_connection(conn):
             except:
                 return False
     return check_db_connection(conn)
+    
+'''
+REDIS_URI = 'redis-17358.c252.ap-southeast-1-1.ec2.cloud.redislabs.com:17358'
+REDIS_PASSWORD = '6nkq7KUJ2p1PYelzW30zXtgG6Afhu1XI'
+
+try:
+    redis_info = REDIS_URI.split(':')
+    dB = redis.StrictRedis(
+    host=redis_info[0],
+    port=redis_info[1],
+    password=REDIS_PASSWORD,
+    charset="utf-8",
+    decode_responses=True)
+except Exception as e:
+    print("Database errors! Recheck REDIS_URI and REDIS_PASSWORD!!")
+    print(str(e))
+    print("Bot is quiting...")
+    exit()
+
+db = db
+
+
+
 def create_user(userid,refby):
     if refby!='n':
         sql = 'Insert into users(userid,referred_by) values({},{})'.format(userid,refby)
@@ -111,4 +133,3 @@ def new_ref(refby,refto):
     db.execute(sql)
     db.commit()
     
-'''
