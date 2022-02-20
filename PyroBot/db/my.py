@@ -3,10 +3,11 @@ import pymysql.cursors
 
 
 
-host = "104.223.107.42"
-user = 'amit'
-password = 'amitpandey123121'
-db = 'airdropbot'
+#host = "104.223.107.42"
+host = 'localhost'
+user = 'AirdropUse'
+password = "Cjjj*$WyX_bd6([?"
+db = 'TelegramAirdropBo'
 new_user_busy = 0
 new_group_busy = 0
 update_user_busy = 0
