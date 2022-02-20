@@ -18,13 +18,13 @@ def create_user(userid,refby):
         sql = 'Insert into users(userid,referred_by) values({},{})'.format(userid,refby)
     else:
         sql = 'Insert into users(userid) values({})'.format(userid)
-    db.execute(sql)
-    db.commit()
+    db.set(sql)
+    #db.commit()
 
 def check_user(userid):
     userid = str(userid)
     sql = 'Select * from users where userid = {}'.format(userid)
-    a = db.execute(sql)
+    a = db.set(sql)
     try:
         r = a.fetchall()
     except AttributeError:
@@ -56,19 +56,19 @@ def update_user(userid,balance,twitter_username,task_level,total_referrals):
     if total_referrals != 'n':
         sql = sql+'total_referrals = {}'.format(total_referrals)
     sql = sql+a
-    db.execute(sql)
-    db.commit()
+    db.set(sql)
+   # db.commit()
 
 def new_ref(refby,refto):
     sql = "Insert into referral(refby,refto) values({},{})".format(str(refby),str(refto))
-    db.execute(sql)
-    db.commit()
+    db.set(sql)
+    #db.commit()
     user = check_user(refby)
     total = user[6]
     total = total+1
     sql = "Update users Set total_referrals = {} where userid={}".format(total,refby)
-    db.execute(sql)
-    db.commit()
+    db.set(sql)
+    #db.commit()
     
 
 
