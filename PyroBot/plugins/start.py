@@ -13,5 +13,7 @@ async def start(bot, update):
 @Client.on_message(filters.private & filters.command(["key"]))
 
 async def start(bot, message):
+	app.send_message( message.chat.id, "This is a ReplyKeyboardMarkup example", reply_markup=ReplyKeyboardMarkup( [ ["A", "B", "C", "D"],["E", "F", "G"],["H", "I"],["J"]], resize_keyboard=True ) )
+	
 
-		.send_message( message.chat.id, "This is a ReplyKeyboardMarkup example", reply_markup=ReplyKeyboardMarkup( [ ["A", "B", "C", "D"],["E", "F", "G"],["H", "I"],["J"]], resize_keyboard=True ) )
+ 
