@@ -11,7 +11,6 @@ async def start(bot, update):
        
 
 
-'''
 
 states = {}
 
@@ -346,4 +345,4 @@ def start(client,message):
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         message.reply('Menu:',reply_markup = reply_markup)
-'''
+
